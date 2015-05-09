@@ -1,0 +1,15 @@
+html,
+body,
+iframe {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+iframe {
+  float: left;
+  width: 50%;
+  border: none;
+}
