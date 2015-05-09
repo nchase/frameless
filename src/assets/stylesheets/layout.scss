@@ -6,10 +6,10 @@ iframe {
 
 body {
   margin: 0;
+  display: flex;
 }
 
 iframe {
-  float: left;
-  width: 50%;
+  width: 100%;
   border: none;
 }

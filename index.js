@@ -14,7 +14,9 @@ app.locals.require = require;
 app.locals.marked = require('marked');
 
 app.get('/', function(request, response){
-  response.render('index', {});
+  response.render('index', {
+    frames: require('./frames')
+  });
 });
 
 app.get('/base.css', function(request, response) {

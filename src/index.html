@@ -10,7 +10,8 @@
     <title>Noah Chase</title>
   </head>
   <body>
-    <iframe src="//me.ahfr.org"></iframe>
-    <iframe src="//tin.ahfr.org"></iframe>
+    <% frames.forEach(function(frame) { %>
+      <iframe src="<%- frame %>"></iframe>
+    <% }); %>
   </body>
 </html>
