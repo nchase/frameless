@@ -14,3 +14,22 @@ iframe,
   width: 100%;
   border: none;
 }
+
+.region--frame {
+  padding: 1em 1em 0;
+
+  @media (min-width: 40em) {
+    padding: 1em 4em 0;
+  }
+}
+
+.ctl--handle {
+  border: solid white;
+  border-width: 0 0.1em;
+  border-width: 0 0.5em;
+  cursor: grab;
+}
+
+.b-dragging {
+  user-select: none;
+}

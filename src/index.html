@@ -14,5 +14,22 @@
        <div class="region--frame region--frame--<%- frame.replace(/[^_a-zA-Z0-9-]+/g, '_') %>"><%- marked(fs.readFileSync(frame).toString()) -%> </div>
        <div class="ctl--handle"></div>
     <% }); %>
+    <script>
+      var lastDrag;
+
+      document.querySelector('.ctl--handle').addEventListener('drag', function(event) {
+        document.querySelector('body').classList.add('b-dragging');
+
+        if (lastDrag !== event.clientX) {
+          lastDag = event.clientX;
+          document.querySelector('.region--frame').style.width = ((event.clientX / window.innerWidth)  * 100 ) + '%';
+          console.log(event.clientX);
+        }
+      });
+
+      document.querySelector('.ctl--handle').addEventListener('dragend', function(event) {
+        document.querySelector('body').classList.remove('b-dragging');
+      });
+    </script>
   </body>
 </html>
