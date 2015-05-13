@@ -1,0 +1,200 @@
+@font-face {
+  src: url('/fonts/ollie.otf');
+  font-family: 'Ollie';
+}
+
+html {
+  padding: 0 1em;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 0;
+  font-family: Georgia, serif;
+  line-height: 2.2;
+  color: white;
+  transition: font-size 200ms;
+
+  @media (min-width: 27em) {
+    width: 400px;
+  }
+
+  @media (min-width: 40em) {
+    width: 500px;
+    font-size: 20px;
+  }
+}
+
+.region--frame--src_me_md {
+  background-color: hsl(0, 60%, 55%);
+}
+
+.contact {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  line-height: 1;
+  text-align: right;
+}
+
+.contact a {
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  margin: 0 0 1em;
+  font-size: 3.6em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+hr {
+  position: relative;
+  margin: 2em 0;
+  font-size: 2em;
+  text-align: center;
+  height: 1px;
+  border: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed white;
+  }
+}
+
+ul {
+  margin: 0 0 4em;
+  padding: 0 1em;
+
+  @media (min-width: 25em) {
+    margin: 8em 4em;
+    padding: 0;
+    padding-left: 2em;
+  }
+}
+
+.text-center {
+  display: block;
+  text-align: center;
+}
+
+.text-center-xs {
+  @media (min-width: 25em) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.text-justify {
+  display: block;
+  text-align: justify;
+}
+
+.hide-xs {
+  @media (min-width: 25em) {
+    display: none;
+  }
+}
+
+.font {
+  display: block;
+  margin: 4em 0;
+  font-weight: normal;
+  text-align: center;
+}
+
+.font--large {
+  margin: 1em 0;
+  font-size: 2.75em;
+  line-height: 1;
+
+  @media (min-width: 25em) {
+    font-size: 4em;
+    line-height: inherit;
+  }
+}
+
+.font--dope {
+  font-family: 'Ollie', Georgia, serif;
+}
+
+.font--code {
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.quote--big {
+  margin: 3em 0;
+  font-size: 2.4em;
+  line-height: 1.75;
+  text-shadow: 0 2px 0 transparent;
+  animation: pulse 1000ms infinite alternate;
+
+
+  @media (min-width: 25em) {
+    line-height: inherit;
+    text-align: center;
+  }
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 2px 0 transparent;
+  }
+
+  to {
+    text-shadow: 0 2px 6px hsl(0, 100%, 80%);
+  }
+}
+
+.mailto {
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+.mailto-inner {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.underline--sunder {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    bottom: 0.05em;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-bottom: 0.025em solid currentColor;
+    border-radius: 999em;
+    transition: width 100ms, border-width 250ms;
+  }
+
+  &:hover:before {
+    width: 100%;
+    border-bottom-width: 0.075em;
+  }
+}
+
+[contenteditable]:focus {
+  outline: none;
+}

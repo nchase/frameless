@@ -11,7 +11,8 @@
   </head>
   <body>
     <% frames.forEach(function(frame) { %>
-      <%- frame -%>
+       <div class="region--frame region--frame--<%- frame.replace(/[^_a-zA-Z0-9-]+/g, '_') %>"><%- marked(fs.readFileSync(frame).toString()) -%> </div>
+       <div class="ctl--handle"></div>
     <% }); %>
   </body>
 </html>
