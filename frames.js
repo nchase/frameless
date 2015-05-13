@@ -1,4 +1,5 @@
+var fs = require('fs');
 module.exports = [
-  '<iframe src="//localhost:3001"></iframe>',
+  fs.readFileSync('./node_modules/me/src/index.md'),
   '<iframe src="//localhost:3002"></iframe>'
 ];
