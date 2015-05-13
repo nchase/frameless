@@ -1,4 +1,4 @@
 module.exports = [
-  '//me.ahfr.org',
-  '//rook.ahfr.org'
+  '<iframe src="//localhost:3001"></iframe>',
+  '<iframe src="//localhost:3002"></iframe>'
 ];
