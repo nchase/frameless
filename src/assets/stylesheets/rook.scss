@@ -15,11 +15,7 @@
   font-family: 'Ollie';
 }
 
-html {
-  padding: 0 1em;
-}
-
-body {
+.region--frame--src_rook_md {
   position: relative;
   margin: 0 auto;
   padding: 1em 0 0;
@@ -29,12 +25,7 @@ body {
   background-color: hsl(200, 60%, 55%);
   transition: font-size 200ms;
 
-  @media (min-width: 27em) {
-    width: 400px;
-  }
-
   @media (min-width: 40em) {
-    width: 500px;
     font-size: 20px;
   }
 }
