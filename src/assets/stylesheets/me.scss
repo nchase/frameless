@@ -65,7 +65,7 @@ ul {
   margin: 0 0 4em;
   padding: 0 1em;
 
-  &[min-width="25em"] {
+  &[min-width~="25em"] {
     margin: 8em 4em;
     padding: 0;
     padding-left: 2em;
@@ -78,7 +78,7 @@ ul {
 }
 
 .text-center-xs {
-  &[min-width="25em"] {
+  &[min-width~="25em"] {
     display: block;
     text-align: center;
   }
@@ -90,7 +90,7 @@ ul {
 }
 
 .hide-xs {
-  &[min-width="25em"] {
+  &[min-width~="25em"] {
     display: none;
   }
 }
@@ -107,7 +107,7 @@ ul {
   font-size: 2.75em;
   line-height: 1;
 
-  &[min-width="25em"] {
+  &[min-width~="25em"] {
     font-size: 4em;
     line-height: inherit;
   }
@@ -130,7 +130,7 @@ ul {
   animation: pulse 1000ms infinite alternate;
 
 
-  &[min-width="25em"] {
+  &[min-width~="25em"] {
     line-height: inherit;
     text-align: center;
   }
