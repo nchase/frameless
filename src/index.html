@@ -123,8 +123,30 @@
         deleteText(contenteditable);
       }, 1000);
 
+      function walkToSelector(walkEl) {
+        while (walkEl) {
+          if (walkEl.classList.contains('region--frame')) {
+            return walkEl;
+          } else {
+            walkEl = walkEl.parentNode
+          }
+        }
+      }
+
       function setCursor(el) {
+        // store previous vertical scroll position:
+        var walkEl = walkToSelector(el);
+        var y = walkEl.scrollTop;
+
+        // trigger focus:
         el.focus();
+
+        // restore previous scroll position.
+        // by default, `focus` is going to try to scroll window
+        // to the focused element.
+        // we don't want that - we want to stay exactly where we are:
+        walkEl.scrollTop = y;
+
         var selection = window.getSelection();
         var nodeText = el.childNodes[0];
 
