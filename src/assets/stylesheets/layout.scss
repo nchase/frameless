@@ -35,10 +35,12 @@ iframe,
 
 
 .ctl--handle {
-  border: solid white;
-  border-width: 0 0.1em;
-  border-width: 0 0.5em;
+  border: solid;
+  border-width: 0 0.25em;
+  border-left-color: hsl(0, 60%, 75%);
+  border-right-color: hsl(200, 60%, 75%);
   cursor: grab;
+
 }
 
 .b-dragging {
