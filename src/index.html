@@ -36,6 +36,7 @@
 
       function startDragging(mouseCoords) {
         document.querySelector('body').classList.add('b-dragging');
+        document.querySelector('[data-contenteditable]').removeAttribute('contenteditable');
 
         document.body.addEventListener('mousemove', moveHandler);
         document.body.addEventListener('mouseup', dropHandler);
@@ -50,6 +51,7 @@
       function dropHandler(event) {
         document.body.removeEventListener('mousemove', moveHandler);
         document.querySelector('body').classList.remove('b-dragging');
+        document.querySelector('[data-contenteditable]').setAttribute('contenteditable', true);
       }
 
       document.querySelector('.ctl--handle').addEventListener('mousedown', detectDrag);

@@ -6,7 +6,7 @@
 
 I live and work in DC as a senior software engineer.
 
-I love effective systems, great products, and the power of <strong contenteditable class="font font--code font--large">{code.}</strong>
+I love effective systems, great products, and the power of <strong contenteditable data-contenteditable="true" class="font font--code font--large">{code.}</strong>
 
 -----
 
