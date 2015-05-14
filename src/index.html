@@ -58,5 +58,69 @@
     </script>
     <script src="scripts/ResizeSensor.js"></script>
     <script src="scripts/ElementQueries.js"></script>
+    <script>
+      var loves = [
+        'code',
+        'people',
+        'tools',
+        'ui/ux',
+        'testing',
+        '#!/bin/sh'
+      ]
+
+      var loveIndex = 1;
+      var minLength = 3;
+
+      var contenteditable = document.querySelector('[contenteditable]');
+
+      function deleteText(el) {
+        el.textContent = el.textContent.slice(0, -minLength) + ".}"
+
+        setCursor(el);
+
+        setTimeout(function() {
+          if (el.textContent.length > minLength) {
+            return deleteText(el);
+          }
+
+          return newText(el);
+        }, 100);
+      }
+
+      function newText(el, position) {
+        position = position || 0;
+
+        var newTextContent = loves[loveIndex];
+
+        if (position === newTextContent.length + 2) {
+          loveIndex = (loveIndex + 1) % loves.length; // modulo to keep consistent indexing
+
+          return setTimeout(function() {
+            deleteText(el);
+          }, 3000);
+        }
+
+        setTimeout(function() {
+          el.textContent = el.textContent.replace(/[^*^{^}]*\./, newTextContent.slice(0, position) + '.');
+          setCursor(el);
+
+          position = position + 1;
+
+          newText(el, position);
+        }, 100);
+      }
+
+      setTimeout(function(){
+        deleteText(contenteditable);
+      }, 1000);
+
+      function setCursor(el) {
+        el.focus();
+        var selection = window.getSelection();
+        var nodeText = el.childNodes[0];
+
+        selection.collapse(nodeText, nodeText.length - 2);
+      }
+    </script>
   </body>
 </html>

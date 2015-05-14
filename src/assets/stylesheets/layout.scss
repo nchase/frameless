@@ -1,5 +1,8 @@
 html,
-body,
+body {
+  height: 100%;
+}
+
 iframe {
   min-height: 100%;
 }
@@ -17,7 +20,7 @@ iframe,
 
 .region--frame {
   padding: 1em 1em 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .region--frame-inner {
