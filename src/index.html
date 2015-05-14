@@ -11,7 +11,11 @@
   </head>
   <body>
     <% frames.forEach(function(frame) { %>
-       <div class="region--frame region--frame--<%- frame.replace(/[^_a-zA-Z0-9-]+/g, '_') %>"><%- marked(fs.readFileSync(frame).toString()) -%> </div>
+       <div class="region--frame region--frame--<%- frame.replace(/[^_a-zA-Z0-9-]+/g, '_') %>">
+         <div class="region--frame-inner">
+           <%- marked(fs.readFileSync(frame).toString()) -%>
+         </div>
+       </div>
        <div class="ctl--handle"></div>
     <% }); %>
     <script>
@@ -52,5 +56,7 @@
       document.querySelector('.ctl--handle').addEventListener('mouseup', killDrag);
 
     </script>
+    <script src="scripts/ResizeSensor.js"></script>
+    <script src="scripts/ElementQueries.js"></script>
   </body>
 </html>

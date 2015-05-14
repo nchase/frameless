@@ -10,10 +10,6 @@
   line-height: 2.2;
   color: white;
   transition: font-size 200ms;
-
-  @media (min-width: 40em) {
-    font-size: 20px;
-  }
 }
 
 .region--frame--src_me_md {
@@ -69,7 +65,7 @@ ul {
   margin: 0 0 4em;
   padding: 0 1em;
 
-  @media (min-width: 25em) {
+  &[min-width="25em"] {
     margin: 8em 4em;
     padding: 0;
     padding-left: 2em;
@@ -82,7 +78,7 @@ ul {
 }
 
 .text-center-xs {
-  @media (min-width: 25em) {
+  &[min-width="25em"] {
     display: block;
     text-align: center;
   }
@@ -94,7 +90,7 @@ ul {
 }
 
 .hide-xs {
-  @media (min-width: 25em) {
+  &[min-width="25em"] {
     display: none;
   }
 }
@@ -111,7 +107,7 @@ ul {
   font-size: 2.75em;
   line-height: 1;
 
-  @media (min-width: 25em) {
+  &[min-width="25em"] {
     font-size: 4em;
     line-height: inherit;
   }
@@ -134,7 +130,7 @@ ul {
   animation: pulse 1000ms infinite alternate;
 
 
-  @media (min-width: 25em) {
+  &[min-width="25em"] {
     line-height: inherit;
     text-align: center;
   }

@@ -17,11 +17,22 @@ iframe,
 
 .region--frame {
   padding: 1em 1em 0;
+  overflow: hidden;
+}
 
-  @media (min-width: 40em) {
-    padding: 1em 4em 0;
+.region--frame-inner {
+  margin: 0 auto;
+
+  &[min-width~="27em"] {
+    width: 400px;
+  }
+
+  &[min-width~="40em"] {
+    width: 500px;
+    font-size: 20px;
   }
 }
+
 
 .ctl--handle {
   border: solid white;
@@ -32,4 +43,5 @@ iframe,
 
 .b-dragging {
   user-select: none;
+  cursor: col-resize;
 }
