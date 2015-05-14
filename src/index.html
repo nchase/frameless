@@ -10,13 +10,15 @@
     <title>Noah Chase</title>
   </head>
   <body>
-    <% frames.forEach(function(frame) { %>
+    <% frames.forEach(function(frame, index) { %>
        <div class="region--frame region--frame--<%- frame.replace(/[^_a-zA-Z0-9-]+/g, '_') %>">
          <div class="region--frame-inner">
            <%- marked(fs.readFileSync(frame).toString()) -%>
          </div>
        </div>
-       <div class="ctl--handle"></div>
+       <% if (index % 2 === 0) { %>
+         <div class="ctl--handle"></div>
+       <% } %>
     <% }); %>
     <script>
       function detectDrag(event)  {
