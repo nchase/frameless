@@ -15,21 +15,42 @@
        <div class="ctl--handle"></div>
     <% }); %>
     <script>
-      var lastDrag;
+      function detectDrag(event)  {
+        // initiate dragging UI if mousedown for 200ms:
+        this.dragID = setTimeout(function() {
+          startDragging(event.clientX);
+        }, 200);
+      }
 
-      document.querySelector('.ctl--handle').addEventListener('drag', function(event) {
+      function killDrag(event) {
+        // kill startDrag timer:
+
+        clearTimeout(this.dragID);
+
+        // (clever way to only have to take the next code path if we're really dragging)
+      }
+
+      function startDragging(mouseCoords) {
         document.querySelector('body').classList.add('b-dragging');
 
-        if (lastDrag !== event.clientX) {
-          lastDag = event.clientX;
-          document.querySelector('.region--frame').style.width = ((event.clientX / window.innerWidth)  * 100 ) + '%';
-          console.log(event.clientX);
-        }
-      });
+        document.body.addEventListener('mousemove', moveHandler);
+        document.body.addEventListener('mouseup', dropHandler);
+      }
 
-      document.querySelector('.ctl--handle').addEventListener('dragend', function(event) {
+
+      function moveHandler(event) {
+        document.querySelectorAll('.region--frame')[0].style.width = ((event.clientX / window.innerWidth)  * 100 ) + '%';
+        document.querySelectorAll('.region--frame')[1].style.width = (100 - (event.clientX / window.innerWidth)  * 100 ) + '%';
+      }
+
+      function dropHandler(event) {
+        document.body.removeEventListener('mousemove', moveHandler);
         document.querySelector('body').classList.remove('b-dragging');
-      });
+      }
+
+      document.querySelector('.ctl--handle').addEventListener('mousedown', detectDrag);
+      document.querySelector('.ctl--handle').addEventListener('mouseup', killDrag);
+
     </script>
   </body>
 </html>
