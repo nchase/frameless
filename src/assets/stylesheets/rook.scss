@@ -22,10 +22,6 @@
   color: white;
   background-color: hsl(200, 60%, 55%);
   transition: font-size 200ms;
-
-  @media (min-width: 40em) {
-    font-size: 20px;
-  }
 }
 
 .region--frame--src_rook_md {
