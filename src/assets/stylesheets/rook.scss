@@ -146,11 +146,11 @@ p {
   margin: 0 0 4em;
 }
 
-ul {
+.region--frame--src_rook_md ul {
   margin: 0 0 3.5em;
   padding: 0 1em;
 
-  @media (min-width: 25em) {
+  &[min-width~="25em"] {
     margin: 0 3.5em 3.5em;
     padding: 0;
     padding-left: 2em;
