@@ -65,6 +65,31 @@
       document.querySelector('.ctl--handle').addEventListener('mouseup', killDrag);
 
     </script>
+    <script>
+      function isElementInViewport (el) {
+        var rect = el.getBoundingClientRect();
+
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function onVisibilityChange (event) {
+        Array.prototype.forEach.call(document.querySelectorAll('.effect'), function(element) {
+          if (isElementInViewport(element)) {
+            return element.classList.add('is-visible');
+          } else {
+            return element.classList.remove('is-visible');
+          }
+        });
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll('.region--frame'), function(element) {
+        element.addEventListener('scroll', onVisibilityChange, false);
+        element.addEventListener('resize', onVisibilityChange, false);
+      });
+    </script>
     <script src="scripts/ResizeSensor.js"></script>
     <script src="scripts/ElementQueries.js"></script>
     <script>

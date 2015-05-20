@@ -127,13 +127,18 @@ ul {
   font-size: 2.4em;
   line-height: 1.75;
   text-shadow: 0 2px 0 transparent;
-  animation: pulse 1000ms infinite alternate;
 
 
   &[min-width~="25em"] {
     line-height: inherit;
     text-align: center;
   }
+}
+
+.quote--big.is-visible {
+  animation: pulse 1000ms infinite alternate;
+  animation-direction: alternate;
+  animation-iteration-count: 10;
 }
 
 @keyframes pulse {

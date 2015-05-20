@@ -4,9 +4,9 @@
 
 <p class="u-center">I enjoy:</p>
 
-<strong class="font font--dope effect--textreveal">Dope Shit.</strong>
-<strong class="font font--frontage effect--textpulse--light">Bright Stuff</strong>
-<strong class="font font--monstro effect--textpulse--dark">
+<strong class="font font--dope effect effect--textreveal">Dope Shit.</strong>
+<strong class="font font--frontage effect effect--textpulse--light">Bright Stuff</strong>
+<strong class="font font--monstro effect effect--textpulse--dark">
   <i class="font font--monstrihinos font--monstrihinos--t">t</i>Dark Stuff<i class="font font--monstrihinos font--monstrihinos--h">h</i>
 </strong>
 

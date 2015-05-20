@@ -29,7 +29,7 @@ I like delivering software incrementally and evaluating progress as I go along.
 
 Great performance and great quality are incredibly important to me. **I'm excellent at fixing UI bugs.**
 
-<blockquote class="quote quote--big">&ldquo;First make it work, then make it right, then make it fast.&rdquo;</blockquote>
+<blockquote class="quote effect quote--big">&ldquo;First make it work, then make it right, then make it fast.&rdquo;</blockquote>
 
 -----
 
