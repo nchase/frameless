@@ -20,6 +20,7 @@ iframe,
 
 .region--frame {
   padding: 1em 1em 0;
+  min-width: 16em;
   overflow: scroll;
   transition: font-size 200ms;
 
