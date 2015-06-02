@@ -21,6 +21,7 @@ iframe,
 .region--frame {
   padding: 1em 1em 0;
   overflow: scroll;
+  transition: font-size 200ms;
 
   &[min-width~="27em"] {
     .region--frame-inner {
@@ -38,6 +39,7 @@ iframe,
 
 .region--frame-inner {
   margin: 0 auto;
+  transition: inherit;
 }
 
 .ctl--handle {
