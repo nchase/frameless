@@ -15,7 +15,8 @@ app.locals.marked = require('marked');
 
 app.get('/', function(request, response){
   response.render('index', {
-    frames: require('./frames')
+    frames: require('./frames'),
+    prefix: ''
   });
 });
 
