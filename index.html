@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/base.css" />
+    <link rel="icon" href="/favicon.png" />
+    <title>Noah Chase</title>
+  </head>
+  <body>
+    
+       <div class="region--frame region--frame--src_me_md">
+         <div class="region--frame-inner">
+           <h1 id="hello-">Hello...</h1>
+<p><span class="text-justify-micro text-center-xs">I am <strong>Noah Chase</strong>. <br class="hide-xs" /> I am a <strong>Software Engineer</strong> who values craftsmanship and getting things done.</span></p>
+<hr>
+<p>I live and work in DC as a senior software engineer.</p>
+<p>I love effective systems, great products, and the power of <strong contenteditable data-contenteditable="true" class="font font--code font--large">{code.}</strong></p>
+<hr>
+<p><span class="text-center-xs">I&#39;ve worked with:</span></p>
+<ul>
+<li>internal and external clients</li>
+<li>small businesses</li>
+<li>individuals</li>
+<li>startups</li>
+<li>local and remote teams.</li>
+</ul>
+<p><span class="text-center-xs">I&#39;ve contributed to:</span></p>
+<ul>
+<li>enterprise-scale web applications</li>
+<li>e-commerce platforms</li>
+<li>one-off applications</li>
+<li>open-source software.</li>
+</ul>
+<hr>
+<p>I like delivering software incrementally and evaluating progress as I go along.</p>
+<p>Great performance and great quality are incredibly important to me. <strong>I&#39;m excellent at fixing UI bugs.</strong></p>
+<blockquote class="quote effect quote--big">&ldquo;First make it work, then make it right, then make it fast.&rdquo;</blockquote>
+
+<hr>
+<p><span class="text-center-xs">Here are some of the skills I own:</span></p>
+<ul>
+<li>UI Building</li>
+<li>Performance-Tuning</li>
+<li>Full-Stack Development</li>
+<li>Creating Test Infrastructure</li>
+<li>Mentoring</li>
+<li>Communication</li>
+<li>Systemic Thinking</li>
+<li>Agile Coaching, Methodology</li>
+</ul>
+<p class="mailto">
+  <a class="mailto-inner font font--code" href="mailto:nchase@gmail.com">nchase@gmail.com</a>
+</p>
+         </div>
+       </div>
+       
+         <div class="ctl--handle"></div>
+       
+    
+       <div class="region--frame region--frame--src_rook_md">
+         <div class="region--frame-inner">
+           <h1 id="hello-">Hello...</h1>
+<p class="u-center">My name is <strong>Noah</strong>. I am a <strong>Software Engineer</strong>.</p>
+
+<p class="u-center">I enjoy:</p>
+
+<p><strong class="font font--dope effect effect--textreveal">Dope Shit.</strong>
+<strong class="font font--frontage effect effect--textpulse--light">Bright Stuff</strong>
+<strong class="font font--monstro effect effect--textpulse--dark">
+  <i class="font font--monstrihinos font--monstrihinos--t">t</i>Dark Stuff<i class="font font--monstrihinos font--monstrihinos--h">h</i>
+</strong></p>
+<p>So yeah, those things. Those things among other things.</p>
+
+<hr>
+<p>I live and work a few blocks away from Washington DC as a senior software engineer.</p>
+<p>Work-wise, I love systemic thinking, building great products, mentoring, and writing code.</p>
+<hr>
+<p>I&#39;m an ex-academic &mdash; started a Master&#39;s program in an unrelated field after college
+&mdash; at the time I thought I&#39;d want an academic career &mdash;
+didn&#39;t finish. I&#39;m happy with not finishing.</p>
+<p>I learned a lot about myself and a lot about the world in that time.</p>
+<p>Teaching my own class with my own curriculum was awesome.</p>
+<p>I still have a bit of a <em>taste</em> for the academic stuff...</p>
+<p>Basically I like to read. For me it all goes back to reading and writing.
+Internalizing stuff and then synthesizing it.</p>
+<p>I started working at a startup in Silver Spring about 3.5 years ago, then we got acquired.
+I&#39;m still at the same place and I still really enjoy my job.</p>
+<hr>
+<p>I&#39;m a bit shy, but not terribly shy.</p>
+<hr>
+<p>I have a twin brother. We&#39;re identical twins, but pretty different.
+It&#39;s interesting sometimes.</p>
+<hr>
+<p><a href="http://m.ahfr.org/">m.ahfr.org</a> is a website that I really enjoyed building. It&#39;s [mostly] just a growing collection of things that I have found on the internet and liked.</p>
+<hr>
+<p><strong class="font font--dope">Stuff I Like:</strong></p>
+<ul>
+<li>Art (low-brow, high-brow)</li>
+<li>Movies (low-brow, high-brow)</li>
+<li>Exercise (I like to go running)</li>
+<li>Learning New Things</li>
+<li>Writing Code/Building Applications</li>
+<li>Magazines, Typography, Design</li>
+<li>Bicycles (I used to build &#39;em)</li>
+<li>&#39;DIY Ethic&#39; Stuff</li>
+<li>Video Games (classic or new)</li>
+</ul>
+<p class="mailto">
+  <a class="mailto-inner font font--dope" href="mailto:nchase@gmail.com">Contact Me.</a>
+</p>
+
+         </div>
+       </div>
+       
+    
+    <script>
+      function detectDrag(event)  {
+        // initiate dragging UI if mousedown for 200ms:
+        this.dragID = setTimeout(function() {
+          startDragging(event.clientX);
+        }, 200);
+      }
+
+      function killDrag(event) {
+        // kill startDrag timer:
+
+        clearTimeout(this.dragID);
+
+        // (clever way to only have to take the next code path if we're really dragging)
+      }
+
+      function startDragging(mouseCoords) {
+        document.querySelector('body').classList.add('b-dragging');
+        document.querySelector('[data-contenteditable]').removeAttribute('contenteditable');
+
+        document.body.addEventListener('touchmove', moveHandler);
+        document.body.addEventListener('mousemove', moveHandler);
+        document.body.addEventListener('touchend', dropHandler);
+        document.body.addEventListener('mouseup', dropHandler);
+      }
+
+
+      function moveHandler(event) {
+        var xCoordinate = event.clientX || event.pageX;
+        document.querySelectorAll('.region--frame')[0].style.width = ((xCoordinate / window.innerWidth)  * 100 ) + '%';
+        document.querySelectorAll('.region--frame')[1].style.width = (100 - (xCoordinate / window.innerWidth)  * 100 ) + '%';
+      }
+
+      function dropHandler(event) {
+        document.body.removeEventListener('touchmove', moveHandler);
+        document.body.removeEventListener('mousemove', moveHandler);
+        document.querySelector('body').classList.remove('b-dragging');
+        document.querySelector('[data-contenteditable]').setAttribute('contenteditable', true);
+      }
+
+      document.querySelector('.ctl--handle').addEventListener('touchstart', detectDrag);
+      document.querySelector('.ctl--handle').addEventListener('mousedown', detectDrag);
+      document.querySelector('.ctl--handle').addEventListener('mouseup', killDrag);
+
+    </script>
+    <script>
+      function isElementInViewport (el) {
+        var rect = el.getBoundingClientRect();
+
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function onVisibilityChange (event) {
+        Array.prototype.forEach.call(document.querySelectorAll('.effect'), function(element) {
+          if (isElementInViewport(element)) {
+            return element.classList.add('is-visible');
+          } else {
+            return element.classList.remove('is-visible');
+          }
+        });
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll('.region--frame'), function(element) {
+        element.addEventListener('scroll', onVisibilityChange, false);
+        element.addEventListener('resize', onVisibilityChange, false);
+      });
+    </script>
+    <script src="src/assets/scripts/ResizeSensor.js"></script>
+    <script src="src/assets/scripts/ElementQueries.js"></script>
+    <script>
+      var loves = [
+        'code',
+        'people',
+        'tools',
+        'ui/ux',
+        'testing',
+        '#!/bin/sh'
+      ]
+
+      var loveIndex = 1;
+      var minLength = 3;
+
+      var contenteditable = document.querySelector('[contenteditable]');
+
+      function deleteText(el) {
+        el.textContent = el.textContent.slice(0, -minLength) + ".}"
+
+        setCursor(el);
+
+        setTimeout(function() {
+          if (el.textContent.length > minLength) {
+            return deleteText(el);
+          }
+
+          return newText(el);
+        }, 100);
+      }
+
+      function newText(el, position) {
+        position = position || 0;
+
+        var newTextContent = loves[loveIndex];
+
+        if (position === newTextContent.length + 2) {
+          loveIndex = (loveIndex + 1) % loves.length; // modulo to keep consistent indexing
+
+          return setTimeout(function() {
+            deleteText(el);
+          }, 3000);
+        }
+
+        setTimeout(function() {
+          el.textContent = el.textContent.replace(/[^*^{^}]*\./, newTextContent.slice(0, position) + '.');
+          setCursor(el);
+
+          position = position + 1;
+
+          newText(el, position);
+        }, 100);
+      }
+
+      setTimeout(function(){
+        deleteText(contenteditable);
+      }, 1000);
+
+      function walkToSelector(walkEl) {
+        while (walkEl) {
+          if (walkEl.classList.contains('region--frame')) {
+            return walkEl;
+          } else {
+            walkEl = walkEl.parentNode
+          }
+        }
+      }
+
+      function setCursor(el) {
+        // store previous vertical scroll position:
+        var walkEl = walkToSelector(el);
+        var y = walkEl.scrollTop;
+
+        // trigger focus:
+        el.focus();
+
+        // restore previous scroll position.
+        // by default, `focus` is going to try to scroll window
+        // to the focused element.
+        // we don't want that - we want to stay exactly where we are:
+        walkEl.scrollTop = y;
+
+        var selection = window.getSelection();
+        var nodeText = el.childNodes[0];
+
+        selection.collapse(nodeText, nodeText.length - 2);
+      }
+    </script>
+  </body>
+</html>
