@@ -39,7 +39,7 @@ iframe, .region--frame {
   cursor: col-resize; }
 
 @font-face {
-  src: url('/fonts/ollie.otf');
+  src: url('fonts/ollie.otf');
   font-family: 'Ollie'; }
 
 .region--frame--src_me_md {
@@ -186,19 +186,19 @@ ul {
   outline: none; }
 
 @font-face {
-  src: url('/fonts/frontage-bulb.otf');
+  src: url('fonts/frontage-bulb.otf');
   font-family: 'Frontage Bulb'; }
 
 @font-face {
-  src: url('/fonts/monstro.otf');
+  src: url('fonts/monstro.otf');
   font-family: 'Monstro'; }
 
 @font-face {
-  src: url('/fonts/monstrihinos.otf');
+  src: url('fonts/monstrihinos.otf');
   font-family: 'Monstrihinos'; }
 
 @font-face {
-  src: url('/fonts/ollie.otf');
+  src: url('fonts/ollie.otf');
   font-family: 'Ollie'; }
 
 .region--frame--src_rook_md {
